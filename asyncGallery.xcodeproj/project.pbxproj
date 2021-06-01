@@ -13,6 +13,11 @@
 		28795F0A266559BD00C969CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28795F08266559BD00C969CA /* Main.storyboard */; };
 		28795F0C266559BE00C969CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28795F0B266559BE00C969CA /* Assets.xcassets */; };
 		28795F0F266559BE00C969CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28795F0D266559BE00C969CA /* LaunchScreen.storyboard */; };
+		28795F1A26655A4600C969CA /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28795F1926655A4600C969CA /* CommonUtils.swift */; };
+		28795F2126655C9C00C969CA /* PhotoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28795F2026655C9C00C969CA /* PhotoCellView.swift */; };
+		28795F2426655E1200C969CA /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28795F2326655E1200C969CA /* Photo.swift */; };
+		28795F27266563DE00C969CA /* AsyncPhotoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28795F26266563DE00C969CA /* AsyncPhotoUtils.swift */; };
+		7496DFAD93B23CE8B3E79315 /* Pods_asyncGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889B3D434A3B71A344867F12 /* Pods_asyncGallery.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,13 @@
 		28795F0B266559BE00C969CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28795F0E266559BE00C969CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28795F10266559BE00C969CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28795F1926655A4600C969CA /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
+		28795F2026655C9C00C969CA /* PhotoCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellView.swift; sourceTree = "<group>"; };
+		28795F2326655E1200C969CA /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		28795F26266563DE00C969CA /* AsyncPhotoUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncPhotoUtils.swift; sourceTree = "<group>"; };
+		889B3D434A3B71A344867F12 /* Pods_asyncGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_asyncGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6FDD3952F52B91FF472996D /* Pods-asyncGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asyncGallery.debug.xcconfig"; path = "Target Support Files/Pods-asyncGallery/Pods-asyncGallery.debug.xcconfig"; sourceTree = "<group>"; };
+		E4A8916C53FDAF6C2BC18B88 /* Pods-asyncGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asyncGallery.release.xcconfig"; path = "Target Support Files/Pods-asyncGallery/Pods-asyncGallery.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7496DFAD93B23CE8B3E79315 /* Pods_asyncGallery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +55,8 @@
 			children = (
 				28795F01266559BD00C969CA /* asyncGallery */,
 				28795F00266559BD00C969CA /* Products */,
+				A60B3D76C3BAE9C41B36BEB3 /* Pods */,
+				E81A085E5CB83660FDC78FDE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +73,50 @@
 			children = (
 				28795F02266559BD00C969CA /* AppDelegate.swift */,
 				28795F04266559BD00C969CA /* SceneDelegate.swift */,
+				28795F0D266559BE00C969CA /* LaunchScreen.storyboard */,
+				28795F0B266559BE00C969CA /* Assets.xcassets */,
+				28795F1D26655C7A00C969CA /* View */,
+				28795F1826655A3A00C969CA /* Assist */,
 				28795F06266559BD00C969CA /* ViewController.swift */,
 				28795F08266559BD00C969CA /* Main.storyboard */,
-				28795F0B266559BE00C969CA /* Assets.xcassets */,
-				28795F0D266559BE00C969CA /* LaunchScreen.storyboard */,
 				28795F10266559BE00C969CA /* Info.plist */,
 			);
 			path = asyncGallery;
+			sourceTree = "<group>";
+		};
+		28795F1826655A3A00C969CA /* Assist */ = {
+			isa = PBXGroup;
+			children = (
+				28795F1926655A4600C969CA /* CommonUtils.swift */,
+				28795F26266563DE00C969CA /* AsyncPhotoUtils.swift */,
+			);
+			path = Assist;
+			sourceTree = "<group>";
+		};
+		28795F1D26655C7A00C969CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				28795F2026655C9C00C969CA /* PhotoCellView.swift */,
+				28795F2326655E1200C969CA /* Photo.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A60B3D76C3BAE9C41B36BEB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6FDD3952F52B91FF472996D /* Pods-asyncGallery.debug.xcconfig */,
+				E4A8916C53FDAF6C2BC18B88 /* Pods-asyncGallery.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E81A085E5CB83660FDC78FDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				889B3D434A3B71A344867F12 /* Pods_asyncGallery.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +126,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28795F13266559BE00C969CA /* Build configuration list for PBXNativeTarget "asyncGallery" */;
 			buildPhases = (
+				28795F2D2665B06500C969CA /* ShellScript */,
+				297E995B010FFFAB5E2ACF9D /* [CP] Check Pods Manifest.lock */,
 				28795EFB266559BD00C969CA /* Sources */,
 				28795EFC266559BD00C969CA /* Frameworks */,
 				28795EFD266559BD00C969CA /* Resources */,
@@ -132,13 +186,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28795F2D2665B06500C969CA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+		297E995B010FFFAB5E2ACF9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-asyncGallery-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		28795EFB266559BD00C969CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28795F2426655E1200C969CA /* Photo.swift in Sources */,
+				28795F27266563DE00C969CA /* AsyncPhotoUtils.swift in Sources */,
+				28795F2126655C9C00C969CA /* PhotoCellView.swift in Sources */,
 				28795F07266559BD00C969CA /* ViewController.swift in Sources */,
 				28795F03266559BD00C969CA /* AppDelegate.swift in Sources */,
+				28795F1A26655A4600C969CA /* CommonUtils.swift in Sources */,
 				28795F05266559BD00C969CA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +383,7 @@
 		};
 		28795F14266559BE00C969CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6FDD3952F52B91FF472996D /* Pods-asyncGallery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +403,7 @@
 		};
 		28795F15266559BE00C969CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4A8916C53FDAF6C2BC18B88 /* Pods-asyncGallery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
